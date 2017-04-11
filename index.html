@@ -22,7 +22,7 @@
         var appUrl = "occapp://";
         if params.inviteToken != null {
           if params.webUrl != null {
-            siteUrl = params.webUrl + params.inviteToken;
+            siteUrl = params.webUrl + "=" + params.inviteToken;
           }
           appUrl = "occapp://invite/" + params.inviteToken;
         } else if params.wishlistId != null {
