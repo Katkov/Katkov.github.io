@@ -15,12 +15,12 @@
           if (params.webUrl) {
             siteUrl = params.webUrl + "=" + params.inviteToken;
           }
-          appUrl = "occapp://invite/" + params.inviteToken;
+          appUrl = "occapp://?invite=" + params.inviteToken;
         } else if (params.wishlistId) {
           if (params.webUrl) {
             siteUrl = params.webUrl + params.wishlistId;
           }
-          appUrl = "occapp://wishlist/" + params.wishlistId;
+          appUrl = "occapp://?wishlist=" + params.wishlistId;
         }
         //main redirection
         var now = new Date().valueOf();
