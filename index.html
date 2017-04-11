@@ -3,20 +3,11 @@
 <head>
     <meta charset="utf-8">
     <title>occapp</title>
+    <script src="parameters_parser.js" type="text/javascript"></script>
 </head>
 <body>
     <script type="text/javascript">
-        //read parameters
-        var params = function (document.location.search) {
-            qs = qs.split('+').join(' ');
-            var params = {},
-            tokens,
-            re = /[?&]?([^=]+)=([^&]*)/g;
-            while (tokens = re.exec(qs)) {
-              params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
-            }
-            return params;
-        }
+        var params = getQueryParams(document.location.search);
         //create urls for app and for site
         var siteUrl = "https://ccstore-test-z3pa.oracleoutsourcing.com/wishlist";
         var appUrl = "occapp://";
